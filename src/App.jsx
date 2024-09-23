@@ -27,13 +27,19 @@ const App = () => {
    function addbutton(e) {
      dispatch(CounterSlice.actions.addd(Number(inputValue)));
    }
+   function keydown(e) {
+     if (e.key === 'Enter') {
+       addbutton();
+     }
+   }
   
     return (
         <>
         <h2>Counter</h2>
         <div  className='counters'>
            <div className='inputfiled'> <input type="text" placeholder='Enter number' value={inputValue} onChange={add} />
-            <button onClick={addbutton}>add</button></div>
+            <button onClick={addbutton} onKeyDown={keydown}>add</button></div>
+
           <h1>{count}</h1> 
             <div className='buttons'>
             <button onClick={incriment}>increment</button>
