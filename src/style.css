@@ -38,3 +38,11 @@ h2{
     margin-left: 40vw;
     margin-top: 10vh;
 }
+.inputfiled{
+  display: flex;
+  gap: 2vw;
+}
+.inputfiled input{
+    width: 16vw;
+    border: none;
+}

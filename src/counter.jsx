@@ -10,6 +10,9 @@ export const CounterSlice = createSlice({
     },
     reducers: {
         // Action
+        addd (state,action){
+        state.count = action.payload;
+        },
         decCount(state,) {
             if (state.count > 0) {
                 state.count = state.count - 1;
